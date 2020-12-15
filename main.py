@@ -119,7 +119,7 @@ while True:
     q4 = q4.capitalize()
     q4 = q4[0]
     if ord(q4) == 89:
-        c.execute("SELECT * FROM patients")
+        c.execute("SELECT rowid, * FROM patients")
         items = c.fetchall()
 
         for item in items:
@@ -135,7 +135,7 @@ while True:
     q5 = q5.capitalize()
     q5 = q5[0]
     if ord(q5) == 89:
-        c.execute("SELECT * FROM doctors")
+        c.execute("SELECT rowid, * FROM doctors")
         items = c.fetchall()
 
         for item in items:
@@ -152,7 +152,7 @@ while True:
     q6 = q6.capitalize()
     q6 = q6[0]
     if ord(q6) == 89:
-        c.execute("SELECT * FROM staffs")
+        c.execute("SELECT rowid, * FROM staffs")
         items = c.fetchall()
 
         for item in items:

@@ -21,6 +21,26 @@ c = conn.cursor()
 #     )
 # """)
 
+
+
+# #Update records
+#     c.execute("""UPDATE customers SET f_name = update_name
+#         WHERE f_name = old_name
+#     """)
+
+#     c.execute("""UPDATE customers SET l_name = l_update
+#         WHERE l_name = l_update
+#     """)
+
+#     c.execute("""UPDATE customers SET phone = update_phone
+#         WHERE phone = old_phone
+#     """)
+
+#     c.execute("""UPDATE customers SET f_name = new_address
+#         WHERE l_name = old_address
+#     """)
+
+
 i = 1
 while i == 1:
     q1 = str(input("do you want to add customers? (yes/no) \n"))
