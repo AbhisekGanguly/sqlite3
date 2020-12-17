@@ -55,6 +55,7 @@ items = c.fetchall()
 for item in items:
     print(item)
 
+
 #executing the cursor / commiting it to database
 conn.commit()
 

@@ -163,11 +163,66 @@ while True:
     else:
         print('wrong input')
 
+    #PAtient deletation
+    q = str(input("Do you want to delete any patient record? (Y/N)"))
+    q = q.capitalize()
+    q = q[0]
+    if ord(q) == 89:
+        p_name = str(input("Enter the name of patient: "))
+        c.execute("""DELETE from patients 
+                    WHERE f_name = "p_name"
+                """)
+        print(p_name, "patient successfully deleted.")
+
+        conn.commit()
+
+    elif ord(q) == 78:
+        print("Okay, Thank you for using our automated system.")
+    
+    else:
+        print("Wrong choice.")
+
+    #Doctor deletation
+    _d = str(input("Do you want to delete any doctor record? (Y/N)"))
+    _d = _d.capitalize()
+    _d = _d[0]
+    if ord(_d) == 89:
+        d_name = str(input("Enter the name of doctor: "))
+        c.execute("""DELETE from patients 
+                    WHERE f_name = "d_name"
+                """)
+        print(d_name, "doctor successfully deleted.")
+        conn.commit()
+
+
+    elif ord(_d) == 78:
+        print("Okay, Thank you for using our automated system.")
+    
+    else:
+        print("Wrong choice.")
+
+    #Staff deletation
+    _s = str(input("Do you want to delete any staff record? (Y/N)"))
+    _s = _s.capitalize()
+    _s = _s[0]
+    if ord(_s) == 89:
+        s_name = str(input("Enter the name of staff: "))
+        c.execute("""DELETE from patients 
+                    WHERE f_name = "s_name"
+                """)
+        print(s_name, "staff successfully deleted.")
+        conn.commit()
+
+
+    elif ord(_s) == 78:
+        print("Okay, Thank you for using our automated system.")
+    
+    else:
+        print("Wrong choice.")
 
     print('\n')
     print("Thank you for using our system. press ctrl+c to exit.")
     print('\n')
-
 
 
 #commiting it to Database
